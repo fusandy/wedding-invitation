@@ -1,0 +1,16 @@
+@import './style/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Noto Serif TC", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: $bg;
+}
+
+section {
+  height: 100vh;
+  padding: 80px 50px 20px;
+}

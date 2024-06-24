@@ -1,0 +1,137 @@
+@import '../../style/colors.scss';
+
+.wedding-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+
+  .landing-photo-wrapper {
+    position: relative;
+
+    @media (max-width: 850px) {
+      order: 2;
+    }
+
+    .landing-photo {
+      width: 420px;
+      height: 500px;
+      overflow: hidden;
+      object-fit: contain;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+
+      @media (max-width: 991px) {
+        width: 350px;
+        height: 420px;
+      }
+  
+      img {
+        width: 100%;
+      }
+  
+      &::before{
+        content: '';
+        width: 420px;
+        height: 500px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: rgba($secondary, 0.5);
+        position: absolute;
+        top: 30px;
+        left: -50px;
+        z-index: -1;
+
+        @media (max-width: 991px) {
+          width: 350px;
+          height: 420px;
+        }
+      }
+    }
+  }
+
+  .landing-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
+    position: relative;
+
+    @media (max-width: 850px) {
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 50px;
+      font-weight: 800;
+      text-align: center;
+
+      @media (max-width: 991px) {
+        font-size: 40px;
+      }
+
+      @media (max-width: 850px) {
+        font-size: 30px;
+      }
+    }
+
+    .greeting-words {
+      font-size: 30px;
+      margin-bottom: 50px;
+      text-align: center;
+
+      @media (max-width: 991px) {
+        font-size: 25px;
+      }
+
+      @media (max-width: 850px) {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .date, .location {
+      font-size: 20px;
+      margin: 5px 0;
+      text-align: center;
+
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 850px) {
+        font-size: 14px;
+      }
+    }
+
+    .flower {
+      width: 100px;
+      height: auto;
+      position: absolute;
+      bottom: -90px;
+      right: -40px;
+      z-index: -1;
+      transform: rotate(26deg);
+
+      @media (max-width: 991px) {
+        width: 80px;
+        bottom: -70px;
+        right: -30px;
+      }
+
+      @media (max-width: 850px) {
+        width: 60px;
+        bottom: -50px;
+        right: -40px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
